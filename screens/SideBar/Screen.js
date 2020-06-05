@@ -1,0 +1,37 @@
+import * as React from 'react';
+import { View, SafeAreaView, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
+
+
+
+export default class Screen extends React.Component {
+    render() {
+        return (
+            <View style={sytles.container}>
+                <SafeAreaView style={{ flex: 1 }}>
+                    <TouchableOpacity style={{ alignItems: 'flex-end', margin: 16 }} onPress={this.props.navigation.openDrawer}>
+                        <FontAwesome5 name='bars' size={24} color="#161924" />
+                    </TouchableOpacity>
+                </SafeAreaView>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Text>{this.props.name}</Text>
+                </View>
+            </View>
+        )
+    }
+}
+
+
+const sytles = StyleSheet.create({
+
+    container: {
+        flex: 1,
+        backgroundColor: '#FFF'
+    },
+    text: {
+        color: '#161924',
+        fontSize: 20,
+        fontWeight: "500"
+    }
+
+});
