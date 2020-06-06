@@ -31,7 +31,7 @@ const Drawer = createDrawerNavigator();
 
 //   );
 // }
-
+import { DrawerContent } from './screens/SideBar/DrawerContent'
 
 const Stack = createStackNavigator();
  
@@ -45,9 +45,9 @@ export default function App(props) {
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
 
-        <NavigationContainer linking={LinkingConfiguration}>
-          <Drawer.Navigator initialRouteName="Profile">
-            <Drawer.Screen name="Profile" component={ProfileScreen} />
+        <NavigationContainer style={{width: '500'}} linking={LinkingConfiguration}>
+          <Drawer.Navigator initialRouteName="Profile" drawerContent={props => <DrawerContent {...props} />}>
+            <Drawer.Screen name="Profile" component={ProfileScreen} style={{height: '50'}} />
             <Drawer.Screen name="Message" component={Root} />
           </Drawer.Navigator>
 

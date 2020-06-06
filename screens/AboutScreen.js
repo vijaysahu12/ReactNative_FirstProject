@@ -8,7 +8,7 @@ export default function AboutScreen() {
     return (
         <ScrollView>
             <View style={styles.profileContainer}>
-                <Image source={ require('../assets/images/VijayProfile.PNG')} style={styles.profileLogo} Text="Vijay Sahu" />
+                <Image source={ require('../../assets/images/vijayprofile.png')} style={styles.profileLogo} Text="Vijay Sahu" />
                 <Text style={styles.profileInstructions} >
                     Angular | .NET | CORE API | Full Stack Developer
                 </Text>
